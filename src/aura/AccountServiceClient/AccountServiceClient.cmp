@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="accounts" type="Account[]"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <!-- Service Component -->
+    <c:AccountService aura:id="service"/>
+
+    <ul>
+    <aura:iteration items="{!v.accounts}" var="account">
+    	<li>{!account.Name}</li>
+    </aura:iteration>
+	</ul>        
+    
+</aura:component>

@@ -1,0 +1,23 @@
+<aura:component implements="flexipage:availableForAllPageTypes"
+                access="global">
+    
+    <!-- 
+        In this implementation, each component creates its own instance of 
+        the counter service: the counter is not shared between components.
+        Each component has a unique counter.
+    --> 
+    <ltng:require scripts="{!$Resource.counterfactory}"
+                  afterScriptsLoaded="{!c.afterScriptsLoaded}"/>
+
+    <aura:attribute name="value" type="Integer" default="0"/>
+    <aura:attribute name="counter" type="Object" access="private"/>
+
+    <lightning:card title="Counter Factory">
+        <aura:set attribute="actions">
+	        <lightning:button label="Get Value" onclick="{!c.getValue}"/>
+	        <lightning:button label="Increment" onclick="{!c.increment}"/>
+        </aura:set>
+		<h1 class="slds-align--absolute-center">{!v.value}</h1>
+    </lightning:card>
+    
+</aura:component>
