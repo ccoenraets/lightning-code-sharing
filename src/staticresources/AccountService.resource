@@ -1,7 +1,7 @@
 window.AccountService = function(component) {
 
     return {
-        
+
         findAll: function(callback) {
             var action = component.get("c.getAccounts");
             action.setCallback(this, function(response) {
@@ -15,13 +15,13 @@ window.AccountService = function(component) {
         },
 
         findByName: function(name, callback) {
-			// implementation here
+            // implementation here
         },
-        
+
         findById: function(id, callback) {
-			// implementation here
+            // implementation here
         },
-        
+
     };
 
 }
