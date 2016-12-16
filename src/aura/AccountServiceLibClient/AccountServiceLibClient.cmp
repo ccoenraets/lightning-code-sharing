@@ -8,8 +8,8 @@
 
     <ul>
     <aura:iteration items="{!v.accounts}" var="account">
-    	<li>{!account.Name}</li>
+        <li>{!account.Name}</li>
     </aura:iteration>
-	</ul>        
+    </ul>        
 
 </aura:component>
